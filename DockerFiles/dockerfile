@@ -2,13 +2,13 @@
 FROM node:16.17.0-alpine
 
 # Set working directory
-WORKDIR /usr/src/app
+WORKDIR /Application_code
 
 # Copy Package.json files
 COPY package*.json ./
 
 # Install production-only dependencies
-RUN npm ci --production
+RUN npm install
 
 # Copy all files now
 COPY . .
